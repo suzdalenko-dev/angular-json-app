@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-post-detail',
@@ -8,5 +7,5 @@ import { HttpClient } from '@angular/common/http';
   styleUrl: './post-detail.css',
 })
 export class PostDetail {
-  constructor(private http: HttpClient) {}
+
 }

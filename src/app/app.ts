@@ -1,5 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Posts } from './services/posts';
+
 
 @Component({
   selector: 'app-root',
@@ -9,4 +11,6 @@ import { RouterOutlet } from '@angular/router';
 })
 export class App {
   protected readonly title = signal('angular-json-app');
+
+  constructor(private posts: Posts) {}
 }
