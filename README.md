@@ -9,7 +9,7 @@ package.json | Angular 21.2.0 y TypeScript 5.9
 POSTS:  https://jsonplaceholder.typicode.com/posts
   
 Utilizamos:  
-1. Componentes.  
+1. Componentes. ng g c posts
 2. Servicios.  
 3. HTTP y consumo de API REST.  
 4. Interfaces TypeScript.  
