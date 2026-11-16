@@ -15,3 +15,17 @@ Utilizamos:
 4. Interfaces TypeScript.  
 5. Rutas y parámetros.  
 6. Directivas y presentación de datos.  
+
+
+angular-json-app  
+│  
+└── src/app/  
+    ├── app.ts             ← Lógica principal  
+    ├── app.html           ← Listado de posts  
+    ├── app.css            ← Estilos  
+    ├── app.routes.ts      ← Navegación  
+    │  
+    └── post-detail/       ← Detalle de cada publicación  
+        ├── post-detail.ts  
+        ├── post-detail.html  
+        └── post-detail.css  
