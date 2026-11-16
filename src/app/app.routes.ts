@@ -1,8 +1,9 @@
 import { Routes } from '@angular/router';
-import { Posts } from './posts/posts';
+import { PostDetail } from './post-detail/post-detail';
 
 export const routes: Routes = [
     {
-        path: 'posts', component: Posts
+        path: 'post7:id', 
+        component: PostDetail
     }
 ];
