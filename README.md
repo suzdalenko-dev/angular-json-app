@@ -6,10 +6,8 @@ src/app/app.routes.ts | Rutas vacías
 src/app/app.config.ts | Configuración básica del router
 package.json | Angular 21.2.0 y TypeScript 5.9
 
-
 POSTS:  https://jsonplaceholder.typicode.com/posts
   
-
 Utilizamos:  
 1. Componentes.  
 2. Servicios.  
