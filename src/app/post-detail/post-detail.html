@@ -1,1 +1,82 @@
-<p>post-detail works!</p>
+
+<div class="page-container">
+
+  <!-- Cabecera -->
+  <header class="header">
+    <div class="brand">
+      <span class="brand-icon">A</span>
+      <div>
+        <h1>Angular Posts</h1>
+        <p>Explorador de publicaciones</p>
+      </div>
+    </div>
+
+    <a class="back-link" href="/">
+      ← Volver al listado
+    </a>
+  </header>
+
+  <main>
+
+    @if (post(); as currentPost) {
+
+      <!-- Presentación -->
+      <section class="hero">
+        <span class="eyebrow">DETALLE DE PUBLICACIÓN</span>
+        <h2>Publicación #{{ currentPost.id }}</h2>
+        <p>Información completa del artículo seleccionado.</p>
+      </section>
+
+      <!-- Contenido -->
+      <article class="post-detail-card">
+
+        <div class="post-detail-header">
+          <span class="post-number">
+            PUBLICACIÓN #{{ currentPost.id }}
+          </span>
+
+          <span class="user-badge">
+            Usuario {{ currentPost.userId }}
+          </span>
+        </div>
+
+        <h2>{{ currentPost.title }}</h2>
+
+        <div class="content-divider"></div>
+
+        <span class="content-label">CONTENIDO COMPLETO</span>
+
+        <p class="post-body">
+          {{ currentPost.body }}
+        </p>
+
+        <div class="post-metadata">
+          <div>
+            <span>ID de publicación</span>
+            <strong>{{ currentPost.id }}</strong>
+          </div>
+
+          <div>
+            <span>ID del usuario</span>
+            <strong>{{ currentPost.userId }}</strong>
+          </div>
+        </div>
+
+      </article>
+
+    } @else {
+
+      <div class="loading">
+        Cargando publicación...
+      </div>
+
+    }
+
+  </main>
+
+  <footer class="footer">
+    Angular Posts · Proyecto de aprendizaje Angular
+  </footer>
+
+</div>
+
