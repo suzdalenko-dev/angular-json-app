@@ -22,4 +22,7 @@ export class Posts {
     return this.http.get<Post[]>(this.apiUrl);
   }
   
+  getPost(id: number) {
+    return this.http.get<Post>(`${this.apiUrl}/${id}`);
+  }
 }
