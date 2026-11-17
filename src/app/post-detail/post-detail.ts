@@ -1,10 +1,10 @@
 import { Component, signal, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Post, Posts } from '../services/posts';
 
 @Component({
   selector: 'app-post-detail',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './post-detail.html',
   styleUrl: './post-detail.css',
 })
