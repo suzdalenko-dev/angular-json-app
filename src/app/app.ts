@@ -17,8 +17,8 @@ export class App implements OnInit {
 
   loadPosts(): void {
     this.posts.getPosts().subscribe(data => {
-      this.postsList.set(data);
-      console.log(data);
+      this.postsList.set(data.slice(0, 7));
+      console.log(data.slice(0, 7));
     });
   }
 
