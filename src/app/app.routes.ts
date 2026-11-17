@@ -3,7 +3,7 @@ import { PostDetail } from './post-detail/post-detail';
 
 export const routes: Routes = [
     {
-        path: 'post:id', 
+        path: 'post/:id', 
         component: PostDetail
     }
 ];
