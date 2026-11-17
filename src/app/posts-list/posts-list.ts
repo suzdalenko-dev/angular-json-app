@@ -1,10 +1,11 @@
 import { Component, signal, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Post, Posts } from '../services/posts';
+import { Counter } from '../counter/counter';
 
 @Component({
   selector: 'app-posts-list',
-  imports: [RouterLink],
+  imports: [RouterLink, Counter],
   templateUrl: './posts-list.html',
   styleUrl: './posts-list.css'
 })
