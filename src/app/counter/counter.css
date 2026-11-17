@@ -1,0 +1,55 @@
+
+:host {
+  display: block;
+}
+
+.counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  width: fit-content;
+  margin: 35px auto;
+  padding: 20px 25px;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  background: white;
+  box-shadow: 0 5px 15px rgba(15, 23, 42, 0.05);
+}
+
+/* Botones + y - */
+.counter input[type="button"] {
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.counter input[type="button"]:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.counter input[type="button"]:active {
+  transform: scale(0.95);
+}
+
+/* Campo que muestra el contador */
+.counter input[type="text"] {
+  width: 75px;
+  height: 42px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: #f8fafc;
+  color: #1e293b;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  outline: none;
+}
