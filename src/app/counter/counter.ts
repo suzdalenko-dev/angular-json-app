@@ -1,4 +1,5 @@
 import { Component, signal } from '@angular/core';
+import { CounterService } from '../services/counter';
 
 @Component({
   selector: 'app-counter',
@@ -7,15 +8,5 @@ import { Component, signal } from '@angular/core';
   styleUrl: './counter.css',
 })
 export class Counter {
-
-  count = signal(0);
-
-  increment(): void {
-    this.count.update(value => value + 1);
-  }
-
-  decrement(): void {
-    this.count.update(value => value - 1);
-  }
-
+  constructor(public counterService: CounterService) {}
 }

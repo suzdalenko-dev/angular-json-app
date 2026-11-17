@@ -4,19 +4,19 @@
   <input
     type="button"
     value="−"
-    (click)="decrement()"
+    (click)="counterService.decrement()"
   >
 
   <input
     type="text"
-    [value]="counterService.count()()"
+    [value]="counterService.count()"
     readonly
   >
 
   <input
     type="button"
     value="+"
-    (click)="increment()"
+    (click)="counterService.increment()"
   >
 
 </div>
