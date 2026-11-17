@@ -1,6 +1,19 @@
-import { Injectable } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
-export class Counter {}
+
+export class CounterService {
+
+  count = signal(0);
+
+  increment(): void {
+    this.count.update(value => value + 1);
+  }
+
+  decrement(): void {
+    this.count.update(value => value - 1);
+  }
+
+}
