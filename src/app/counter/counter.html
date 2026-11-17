@@ -1,1 +1,22 @@
-<p>counter works!</p>
+
+<div class="counter">
+
+  <input
+    type="button"
+    value="−"
+    (click)="decrement()"
+  >
+
+  <input
+    type="text"
+    [value]="count()"
+    readonly
+  >
+
+  <input
+    type="button"
+    value="+"
+    (click)="increment()"
+  >
+
+</div>
