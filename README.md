@@ -31,7 +31,7 @@ angular-json-app
         └── post-detail.css  
 
 
-Resamos Angular:  
+Recordamos Angular:  
 1  
 Componentes y comunicación  
 
@@ -108,5 +108,4 @@ Testing y calidad
 - Tratamiento de errores.  
 - Accesibilidad y diseño adaptable.  
   
-    
     
