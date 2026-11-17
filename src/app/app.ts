@@ -1,10 +1,10 @@
 import { Component, signal, OnInit} from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { Post, Posts } from './services/posts';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, RouterLink],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -27,8 +27,8 @@ export class App implements OnInit {
      this.loadPosts();
   }
 
-  showPostDetail(p: Post): void {
-    alert('Título: ' + p.title + '\nDescripción: ' + p.body);
-  }
+  // showPostDetail(p: Post): void {
+  //   alert('Título: ' + p.title + '\nDescripción: ' + p.body);
+  // }
 }
 

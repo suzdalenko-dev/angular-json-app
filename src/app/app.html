@@ -44,7 +44,7 @@
 
         @for (post of postsList(); track post.id) {
 
-          <article class="post-card" (click)="showPostDetail(post)">
+          <article class="post-card">
 
             <div class="post-card-header">
               <span class="post-number">
@@ -59,7 +59,7 @@
 
             <div class="post-footer">
               <span>Usuario {{ post.userId }}</span>
-              <span>Leer publicación →</span>
+              <a [routerLink]="['/post', post.id]">Leer publicación </a>
             </div>
 
           </article>
