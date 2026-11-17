@@ -1,7 +1,81 @@
-<h1>Aplicación minimalista para mostrar domininio Angular</h1>
 
-<p>Ejemplo de trabajo con API REST.</p>
+<div class="page-container">
 
-<hr>
+  <!-- Cabecera -->
+  <header class="header">
+    <div class="brand">
+      <span class="brand-icon">A</span>
+      <div>
+        <h1>Angular Posts</h1>
+        <p>Explorador de publicaciones</p>
+      </div>
+    </div>
+
+    <span class="status">API conectada</span>
+  </header>
+
+  <!-- Contenido principal -->
+  <main>
+
+    <section class="hero">
+      <div>
+        <span class="eyebrow">PANEL DE PUBLICACIONES</span>
+        <h2>Explora todas las publicaciones</h2>
+        <p>
+          Una colección de artículos obtenidos mediante una API REST.
+        </p>
+      </div>
+
+      <div class="post-counter">
+        <span>Total de publicaciones</span>
+        <strong>{{ postsList().length }}</strong>
+      </div>
+    </section>
+
+    <!-- Lista de publicaciones -->
+    <section class="posts-section">
+
+      <div class="section-heading">
+        <h2>Últimas publicaciones</h2>
+        <span>{{ postsList().length }} resultados</span>
+      </div>
+
+      <div class="posts-grid">
+
+        @for (post of postsList(); track post.id) {
+
+          <article class="post-card" (click)="showPostDetail(post)">
+
+            <div class="post-card-header">
+              <span class="post-number">
+                #{{ post.id }}
+              </span>
+              <span class="post-arrow">↗</span>
+            </div>
+
+            <h3>{{ post.title }}</h3>
+
+            <p>{{ post.body }}</p>
+
+            <div class="post-footer">
+              <span>Usuario {{ post.userId }}</span>
+              <span>Leer publicación →</span>
+            </div>
+
+          </article>
+
+        }
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    Angular Posts · Proyecto de aprendizaje Angular
+  </footer>
+
+</div>
 
 <router-outlet />

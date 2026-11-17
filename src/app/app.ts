@@ -1,6 +1,6 @@
-import { Component, signal, OnInit, OnChanges, DoCheck, AfterContentInit, OnDestroy} from '@angular/core';
+import { Component, signal, OnInit} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Posts } from './services/posts';
+import { Post, Posts } from './services/posts';
 
 @Component({
   selector: 'app-root',
@@ -9,13 +9,15 @@ import { Posts } from './services/posts';
   styleUrl: './app.css'
 })
 
-export class App implements OnInit, OnChanges, DoCheck, AfterContentInit, OnDestroy {
+export class App implements OnInit {
   protected readonly title = signal('angular-json-app');
+   postsList = signal<Post[]>([]);
 
   constructor(private posts: Posts) {}
 
-  loadPosts() {
+  loadPosts(): void {
     this.posts.getPosts().subscribe(data => {
+      this.postsList.set(data);
       console.log(data);
     });
   }
@@ -25,19 +27,8 @@ export class App implements OnInit, OnChanges, DoCheck, AfterContentInit, OnDest
      this.loadPosts();
   }
 
-  ngOnChanges(): void{
-    console.log('Han cambiado los valores de entrada');
-  }
-
-  ngDoCheck(): void{
-    console.log('Angular comprueba los cambios');
-  }
-
-  ngAfterContentInit(): void{
-    console.log('El contenido proyectado se ha inicializado');
-  }
-
-  ngOnDestroy(): void {
-    console.log('El componente se está destruyendo');
+  showPostDetail(p: Post): void {
+    alert('Título: ' + p.title + '\nDescripción: ' + p.body);
   }
 }
+
