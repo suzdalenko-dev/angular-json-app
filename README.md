@@ -45,6 +45,44 @@ Profundizamos en:
 TypeScript  
   
 Es fundamental para trabajar profesionalmente con Angular:  
+Signals          
+- signal()          
+- computed()          
+- effect()          
+- asReadonly()          
+- update() y set()          
+Plantillas          
+- @if, @else          
+- @for, track          
+- @switch          
+- @empty          
+- @defer          
+- Interpolación {{ }}          
+- Property binding [property]          
+- Event binding (event)          
+- Two-way binding [(ngModel)]          
+Inyección de dependencias          
+- inject()          
+- providers          
+- providedIn: 'root'          
+- Servicios singleton          
+- Inyección mediante constructor          
+Ciclo de vida          
+- ngOnInit          
+- ngOnChanges          
+- ngOnDestroy          
+- ngAfterViewInit          
+RxJS          
+- Observable          
+- subscribe()          
+- pipe()          
+- map()          
+- filter()          
+- switchMap()          
+- catchError()          
+- takeUntilDestroyed()          
+- AsyncPipe          
+
 - Interfaces y tipos.  
 - Clases, herencia y genéricos.  
 - Tipos string, number, boolean, any, unknown.  
