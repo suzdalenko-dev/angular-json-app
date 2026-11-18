@@ -70,10 +70,11 @@
   </main>
   <div>
     @if (selectedPost(); as postSelected){
-      <p> XXXX {{ postSelected.title }} YYY </p>
+      <p> {{ postSelected.title }}</p>
     } else {
       <p>The post is not selected there</p>
     }
   </div>
 </div>
+
 <app-counter [posts]="postsList()" (postSelected)="onPostSelected($event)" />
