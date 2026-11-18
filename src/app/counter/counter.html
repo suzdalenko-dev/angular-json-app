@@ -1,6 +1,6 @@
 
 <div class="counter">
-  <div>
+  <div class="post-title">
   <input
     type="button"
     value="−"
@@ -21,7 +21,7 @@
   <div>
   <div>
     @if (posts[counterService.count()]; as post) {
-      <p>Publicación: {{ post.title }}</p>
+      <p class="post-title">Publicación: {{ post.title }}</p>
     }
   </div>
 </div>
