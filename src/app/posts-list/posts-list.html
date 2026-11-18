@@ -41,26 +41,26 @@
 
         @for (post of postsList(); track post.id) {
 
-          <article class="post-card">
+        <article class="post-card">
 
-            <div class="post-card-header">
-              <span class="post-number">#{{ post.id }}</span>
-              <span class="post-arrow">↗</span>
-            </div>
+          <div class="post-card-header">
+            <span class="post-number">#{{ post.id }}</span>
+            <span class="post-arrow">↗</span>
+          </div>
 
-            <h3>{{ post.title }}</h3>
+          <h3>{{ post.title }}</h3>
 
-            <p>{{ post.body }}</p>
+          <p>{{ post.body }}</p>
 
-            <div class="post-footer">
-              <span>Usuario {{ post.userId }}</span>
+          <div class="post-footer">
+            <span>Usuario {{ post.userId }}</span>
 
-              <a [routerLink]="['/post', post.id]">
-                Leer publicación
-              </a>
-            </div>
+            <a [routerLink]="['/post', post.id]">
+              Leer publicación
+            </a>
+          </div>
 
-          </article>
+        </article>
 
         }
 
@@ -68,6 +68,12 @@
     </section>
 
   </main>
-
+  <div>
+    @if (selectedPost(); as postSelected){
+      <p> XXXX {{ postSelected.title }} YYY </p>
+    } else {
+      <p>The post is not selected there</p>
+    }
+  </div>
 </div>
-<app-counter [posts]="postsList()" />
+<app-counter [posts]="postsList()" (postSelected)="onPostSelected($event)" />

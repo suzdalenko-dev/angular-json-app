@@ -26,5 +26,12 @@ export class PostsList implements OnInit {
   ngOnInit(): void {
     this.loadPosts();
   }
+
+
+  selectedPost = signal<Post | null>(null);
+  
+  onPostSelected(post: Post): void {
+    this.selectedPost.set(post);
+  }
 }
 
