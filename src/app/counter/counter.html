@@ -21,3 +21,7 @@
 
 </div>
 <br>
+
+@if (posts[counterService.count()]; as post) {
+  <p>Publicación: {{ post.title }}</p>
+}

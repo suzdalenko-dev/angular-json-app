@@ -1,5 +1,6 @@
-import { Component, signal } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CounterService } from '../services/counter';
+import { Post } from '../services/posts';
 
 @Component({
   selector: 'app-counter',
@@ -7,6 +8,11 @@ import { CounterService } from '../services/counter';
   templateUrl: './counter.html',
   styleUrl: './counter.css',
 })
+
+
 export class Counter {
+  @Input() posts!: Post[];
+
   constructor(public counterService: CounterService) {}
+
 }
