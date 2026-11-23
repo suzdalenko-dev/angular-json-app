@@ -69,10 +69,10 @@
 
   </main>
   <div>
-    @if (selectedPost(); as postSelected){
-      <p> {{ postSelected.title }}</p>
-    } else {
-      <p>The post is not selected there</p>
+    @if (selectedPost()) {
+    <p>{{ selectedPost()?.title }}</p>
+    } @else {
+    <p>No hay ninguna publicación seleccionada</p>
     }
   </div>
 </div>
