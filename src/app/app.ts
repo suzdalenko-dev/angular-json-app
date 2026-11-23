@@ -66,8 +66,8 @@ GIT HUB
   git push -u origin feature/registro   <- hay que indicar a donde voy a subir obligadorio si o no ?¿
   git branch
   git status
-  
 
+  * other
 
 
 
