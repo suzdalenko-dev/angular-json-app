@@ -64,8 +64,9 @@ GIT HUB
   git add .
   git commit -m "Añadir registro de usuarios"
   git push -u origin feature/registro   <- hay que indicar a donde voy a subir obligadorio si o no ?¿
-
-
+  git branch
+  git status
+  
 
 
 
